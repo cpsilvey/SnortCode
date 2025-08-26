@@ -1,0 +1,11 @@
+{
+  "name": "sass-compile",
+  "version": "1.0.0",
+  "description": "A simple sass compile config.",
+  "main": "index.js",
+  "scripts": {
+    "watch": "sass --watch --update --style=compressed assets/scss/source.scss:style.css"
+  },
+  "author": "",
+  "license": ""
+}

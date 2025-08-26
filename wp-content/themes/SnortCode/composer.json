@@ -1,0 +1,8 @@
+{
+    "name": "snortcode/qr",
+    "version": "1.0.0",
+    "description": "A simple PHP QR code generator.",
+    "require": {
+        "endroid/qr-code": "^6.0"
+    }
+}

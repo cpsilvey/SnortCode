@@ -1,0 +1,22 @@
+.button {
+    display:inline-block;
+    height:50px;
+    line-height:50px;
+    padding:0 30px;
+    @include border-radius(10px);
+    @include transition(300ms);
+    text-decoration:none;
+}
+.button-solid {
+    @extend .button;
+    background-color:$navy;
+    color:$white;
+    &:hover {
+        background-color:$navy80;
+    }
+}
+.button-outline {
+    @extend .button;
+    border:1px solid $navy20;
+    color:$navy20;
+}
