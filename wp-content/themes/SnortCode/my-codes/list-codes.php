@@ -25,7 +25,7 @@
             $redirect = get_field('redirect', $code->ID);
             ?>
             <li class="clearfix" data-id="<?php echo $code->ID; ?>">
-                <a href="<?php echo get_the_permalink($code->ID); ?>/?action=edit"></a>
+                <a href="<?php echo get_home_url(); ?>/my-codes/?action=edit&id=<?php echo $code->ID; ?>"></a>
                 <div class="code-preview"></div>
                 <p class="code-name"><?php echo $name; ?><span>Created: <?php echo $date; ?></span></p>
                 <p class="code-scans">Scans<span><?php echo $scan_count; ?></span></p>

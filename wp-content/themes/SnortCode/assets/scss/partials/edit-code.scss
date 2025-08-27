@@ -1,8 +1,5 @@
 #edit-code {
     overflow:visible;
-    h1 {
-        margin-bottom:10px;
-    }
     #edit-code-form {
         position:relative;
         float:left;
@@ -12,13 +9,26 @@
         background-color:#ffffff;
         overflow:visible;
         @include border-radius(10px);
-        #code-active {
-            position:absolute;
-            top:20px;
-            right:30px;
+        h3 {
+            font-size:24px;
+            font-weight:700;
+            margin-bottom:20px;
+            padding-bottom:10px;
+            border-bottom:1px solid #cccccc;
         }
-        input {
-           
+        h4 {
+            font-weight:600;
+            font-size:22px;
+        }
+        label {
+            margin-top:20px;
+        }
+        .custom-radio-option {
+            float:left;
+            margin-right:10px;
+        }
+        #edit-code-submit {
+            margin-top:20px;
         }
     }
     #edit-code-preview {
@@ -30,4 +40,18 @@
         @include border-radius(10px);
         float:left;
     }
+}
+
+.pcr-type[data-type="HEXA"] {
+    display:none;
+}
+.pcr-button {
+    border:1px solid #cccccc;
+}
+.pcr-app {
+    @include border-radius(10px);
+    overflow:hidden;
+}
+.pcr-save {
+    background:$aqua !important;
 }
