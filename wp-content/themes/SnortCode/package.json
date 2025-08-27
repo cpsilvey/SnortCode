@@ -7,5 +7,8 @@
     "watch": "sass --watch --update --style=compressed assets/scss/source.scss:style.css"
   },
   "author": "",
-  "license": ""
+  "license": "",
+  "dependencies": {
+    "sass": "^1.91.0"
+  }
 }

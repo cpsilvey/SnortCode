@@ -1,4 +1,5 @@
 		
+			</div><!-- / Inner Wrapper -->
 
 		</div><!-- / Page Wrapper -->
 

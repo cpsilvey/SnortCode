@@ -1,0 +1,334 @@
+/* ===========================
+   FORM RESET + BASE (Accessible)
+   =========================== */
+
+/* 0) Inherit typography + color from container */
+:where(input, button, select, textarea, optgroup, option) {
+    font: inherit;
+    color: inherit;
+    letter-spacing: inherit;
+  }
+  
+  /* 1) Remove default margins & make controls full-width by default */
+  :where(fieldset, legend, label, input, select, textarea, button, datalist, output, progress, meter) {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+  }
+  :where(input, select, textarea, button) {
+    width: 100%;
+    background: transparent;
+  }
+  
+  /* 2) Buttons: reset native styles but keep accessibility */
+  :where(button, [type="button"], [type="submit"], [type="reset"]) {
+    appearance: none;
+    -webkit-appearance: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    line-height: 1.2;
+    border: 1px solid transparent;
+    background-color: transparent;
+  }
+  :where(button:disabled, [type="button"]:disabled, [type="submit"]:disabled, [type="reset"]:disabled) {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+  
+  /* 3) Textual inputs + textarea: neutral base */
+  :where(input[type="text"],
+         input[type="search"],
+         input[type="email"],
+         input[type="url"],
+         input[type="tel"],
+         input[type="password"],
+         input[type="number"],
+         input[type="date"],
+         input[type="datetime-local"],
+         input[type="month"],
+         input[type="week"],
+         input[type="time"],
+         textarea) {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid currentColor;
+    border-radius: 0;
+    padding: 0.6em 0.75em;
+    line-height: 1.4;
+    background-color: transparent;
+    min-height: 2.5rem;
+  }
+  
+  /* 3a) Textarea height & resize */
+  :where(textarea) {
+    min-height: 6rem;
+    resize: vertical;
+  }
+  
+  /* 3b) Placeholder color consistent */
+  ::placeholder {
+    opacity: 1;
+    color: currentColor;
+    filter: opacity(0.6);
+  }
+  
+  /* 3c) Disabled/read-only */
+  :where(input, select, textarea):disabled,
+  :where(input[readonly], textarea[readonly]) {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  /* 4) Focus styles (keep visible; use outline, not box-shadow) */
+  :where(input, select, textarea, button):focus {
+    outline: 0;
+    outline-offset:0;
+  }
+  
+  /* 5) Select: normalize */
+  :where(select) {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid currentColor;
+    padding: 15px 20px; /* room for custom arrow if you add one */
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: right 0.6em center;
+    background-size: 1em 1em;
+    border:1px solid #cccccc;
+    font-size:18px;
+    @include border-radius(10px);
+  }
+  :where(select[multiple], select[size]) {
+    padding-right: 0.75em;
+    min-height: 2.5rem;
+  }
+  select option {
+    background-color: #fff;
+    font-family: inherit;
+    padding: 0.25em 0.5em;
+  }
+  select option:disabled {
+    color: #888;
+  }
+  select option:checked {
+    background-color: #ededed; /* highlight the chosen option in some browsers */
+  }
+  
+  /* 6) Checkbox/Radio: remove inconsistencies, keep native for a11y */
+  :where(input[type="checkbox"], input[type="radio"]) {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 1.1em;
+    height: 1.1em;
+    margin: 0;
+    border: 1px solid currentColor;
+    display: inline-grid;
+    place-content: center;
+    vertical-align: middle;
+  }
+  :where(input[type="checkbox"]) { border-radius: 0.15em; }
+  :where(input[type="radio"])    { border-radius: 50%; }
+  
+  /* checked indicators */
+  :where(input[type="checkbox"]::before) {
+    content: "";
+    width: 0.6em; height: 0.6em;
+    transform: scale(0);
+    background: currentColor;
+  }
+  :where(input[type="radio"]::before) {
+    content: "";
+    width: 0.55em; height: 0.55em;
+    border-radius: 50%;
+    transform: scale(0);
+    background: currentColor;
+  }
+  :where(input[type="checkbox"]:checked::before,
+         input[type="radio"]:checked::before) {
+    transform: scale(1);
+  }
+  
+  /* 7) Range input */
+  :where(input[type="range"]) {
+    width: 100%;
+    background: transparent;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+  input[type="range"]::-moz-range-thumb {
+    border: none;
+  }
+  
+  /* 8) File input: make clickable area consistent */
+  :where(input[type="file"]) {
+    border: 1px dashed currentColor;
+    padding: 0.6em;
+  }
+  :where(input[type="file"]::-webkit-file-upload-button) {
+    -webkit-appearance: none;
+    border: 1px solid currentColor;
+    padding: 0.4em 0.6em;
+    background: transparent;
+    cursor: pointer;
+  }
+  
+  /* 9) Color input */
+  :where(input[type="color"]) {
+    padding: 0;
+    border: 1px solid currentColor;
+    width: 2.5rem; height: 2.5rem;
+  }
+  
+  /* 10) Number/search quirks */
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+  input[type="search"] { -webkit-appearance: none; outline-offset: 2px; }
+  input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+  
+  /* 11) Fieldset/legend/label normalization */
+  :where(fieldset) { border: 0; min-width: 0; }
+  :where(legend)   { padding: 0; float: left; width: 100%; }
+  :where(label)    { display: inline-block; }
+  
+  /* 12) Progress/Meter neutral */
+  :where(progress, meter) {
+    width: 100%;
+    vertical-align: middle;
+  }
+  
+  /* 13) Autocomplete (Chrome autofill) */
+  input:-webkit-autofill,
+  textarea:-webkit-autofill,
+  select:-webkit-autofill {
+    -webkit-text-fill-color: inherit;
+    transition: background-color 100000s ease-in-out 0s; /* neutralize yellow bg */
+  }
+  
+  /* 14) Invalid/valid outlines (optional – keep subtle) */
+  :where(input, select, textarea):invalid { outline-color: currentColor; }
+  :where(input, select, textarea):valid   { outline-color: currentColor; }
+  
+  /* 15) Utility: compact spacing between controls */
+  :where(.form-row) { margin-block: 0.75rem; }
+  
+
+label {
+    display:block;
+}
+input {
+    border:1px solid #cccccc;
+    font-size:18px;
+    padding:0 20px;
+    height:50px;
+    @include border-radius(10px);
+}
+
+.custom-toggle {
+    width:70px;
+    @include border-radius(15px);
+    height:30px;
+    background-color:#cccccc;
+    position:relative;
+    overflow:hidden;
+    cursor:pointer;
+    &.active {
+        background-color: green;
+        &:after {
+            right:2px;
+            left:auto;
+        }
+        .off {
+            display:none;
+        }
+        .on {
+            display:block;
+        }
+    }
+    &:after {
+        content:'';
+        position:absolute;
+        top:2px;
+        left:2px;
+        width:26px;
+        height:26px;
+        background-color:#ffffff;
+        @include border-radius(50%);
+    }
+    span {
+        position:absolute;
+        top:50%;
+        @include translate(0, -50%);
+        font-size:14px;
+        color:#ffffff;
+        &.off {
+            right:13px;
+        }
+        &.on {
+            left:13px;
+            display:none;
+        }
+    }
+}
+.custom-select {
+    position:relative;
+    .custom-select-value {
+        border:1px solid #cccccc;
+        height:50px;
+        line-height:50px;
+        @include border-radius(10px);
+        padding:0 20px;
+        position:relative;
+        cursor:pointer;
+        &:after {
+            content:'';
+            position:absolute;
+            top:50%;
+            right:20px;
+            @include translate(0, -50%);
+            width: 0; 
+            height: 0; 
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid #cccccc;
+        }
+    }
+    .custom-select-menu {
+        border:1px solid #cccccc;
+        @include border-radius(10px);
+        background-color:#ededed;
+        padding:20px 15px;
+        width:100%;
+        position:absolute;
+        top:55px;
+        left:0;
+        opacity:0;
+        visibility:hidden;
+        &.active {
+            opacity:1;
+            visibility:visible;
+        }
+        li {
+            padding:7px 10px;
+            cursor:pointer;
+            @include border-radius(10px);
+            @include transition(300ms);
+            &:hover {
+                background-color:#ffffff;
+                color:#4DCCBD;
+            }
+        }
+    }
+}
+.instructions {
+    font-size:15px;
+    color:#999999;
+    margin-bottom:5px;
+}

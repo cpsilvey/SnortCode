@@ -13,7 +13,7 @@ function is_snortcode_admin() {
     $current_user = wp_get_current_user();
     $roles = (array) $current_user->roles;
     $role = $roles[0];
-    if ($role == 'SnortCode Admin') {
+    if ($role == 'SnortCode Admin' || $role == 'administrator') {
         return true;
     } else {
         return false;

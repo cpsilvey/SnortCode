@@ -26,7 +26,7 @@ define( 'DB_NAME', 'snortcode' );
 define( 'DB_USER', 'root' );
 
 /** Database password */
-define( 'DB_PASSWORD', 'root' );
+define( 'DB_PASSWORD', 'mysql' );
 
 /** Database hostname */
 define( 'DB_HOST', 'localhost' );

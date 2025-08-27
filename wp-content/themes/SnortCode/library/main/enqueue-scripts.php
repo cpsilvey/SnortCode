@@ -13,6 +13,10 @@ function blankie_scripts()
       wp_enqueue_script( 'header',      get_template_directory_uri() . '/js/header.js', array( 'jquery' ), '1.0', true );
       // Enqueue Login Scripts
       wp_enqueue_script( 'login',      get_template_directory_uri() . '/js/login.js', array( 'jquery' ), '1.0', true );
+      // Enqueue Form Scripts
+      wp_enqueue_script( 'forms',      get_template_directory_uri() . '/js/forms.js', array( 'jquery' ), '1.0', true );
+      // Enqueue Create Code Scripts
+      wp_enqueue_script( 'create',      get_template_directory_uri() . '/js/create-code.js', array( 'jquery' ), '1.0', true );
   }
 
 add_action('init', 'blankie_scripts'); // Add Scripts

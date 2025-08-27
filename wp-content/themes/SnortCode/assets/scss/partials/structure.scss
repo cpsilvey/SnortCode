@@ -1,19 +1,14 @@
 body {
-    
+    background-color:#f5f5f5;
 }
 #page-wrapper {
-    overflow:hidden;
     width:calc(100%);
     position:relative;
 }
 .inner-wrapper {
-    width:100%;
-    padding:0 30px;
-    width:calc(100% - 60px);
-    max-width:1440px;
-    position:relative;
-    left:50%;
-    @include translate(-50%, 0);
+    width:calc(80% - 100px);
+    margin:50px 0 0 20%;
+    padding:0 50px;
 }
 .clearfix {
     &::after {
