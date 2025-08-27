@@ -14,7 +14,7 @@
         clear:both;
         padding-top:20px;
         li {
-            background-color:#ffffff;
+            background-color:$white;
             border:1px solid #ededed;
             margin-bottom:10px;
             @include border-radius(10px);
@@ -24,7 +24,7 @@
             &:hover {
                 border-color:#4DCCBD;
                 .code-name {
-                    color:#4DCCBD;
+                    color:#a855f7;
                 }
             }
             a {
@@ -50,6 +50,7 @@
                 font-size:20px;
                 margin-right:20px;
                 width:20%;
+                color:$charcoal;
                 span {
                     display:block;
                     font-size:16px;

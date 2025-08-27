@@ -1,22 +1,16 @@
 .button {
     display:inline-block;
-    height:50px;
-    line-height:50px;
-    padding:0 30px;
+    height:45px;
+    line-height:45px;
+    padding:0 20px;
     @include border-radius(10px);
     @include transition(300ms);
     text-decoration:none;
 }
-.button-solid {
+.button-aqua {
     @extend .button;
-    background-color:$navy;
+    background-color:$aqua;
     color:$white;
     &:hover {
-        background-color:$navy80;
     }
-}
-.button-outline {
-    @extend .button;
-    border:1px solid $navy20;
-    color:$navy20;
 }

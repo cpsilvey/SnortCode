@@ -9,6 +9,7 @@
   "author": "",
   "license": "",
   "dependencies": {
+    "qr-code-styling": "^1.9.2",
     "sass": "^1.91.0"
   }
 }

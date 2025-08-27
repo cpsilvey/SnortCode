@@ -9,7 +9,7 @@
     $codes = get_posts($args);
     ?>
     <h1>My Codes (<?php echo count($codes); ?>)</h1>
-    <a href="#">Create New</a>
+    <a href="<?php echo get_home_url(); ?>/my-codes/?action=create">Create New</a>
     <div id="code-search" class="clearfix">
         <input type="text" placeholder="Search Codes" />
     </div>

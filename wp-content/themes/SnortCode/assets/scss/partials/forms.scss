@@ -222,6 +222,19 @@
 
 label {
     display:block;
+    font-weight:600;
+    margin-bottom:10px;
+    font-size:18px;
+    @include mq(1440px) {
+      font-size:16px;
+    }
+    span {
+      display:block;
+      color:$gray;
+      font-weight:400;
+      margin-top:5px;
+      font-size:0.9em;
+    }
 }
 input {
     border:1px solid #cccccc;
@@ -229,6 +242,13 @@ input {
     padding:0 20px;
     height:50px;
     @include border-radius(10px);
+    @include mq(1440px) {
+      font-size:16px;
+    }
+    &.error {
+      border-color:$red;
+      background-color:$pink;
+    }
 }
 
 .custom-toggle {
@@ -327,8 +347,39 @@ input {
         }
     }
 }
-.instructions {
-    font-size:15px;
-    color:#999999;
-    margin-bottom:5px;
+.custom-radio {
+  .custom-radio-option {
+    font-size:18px;
+    margin-bottom:10px;
+    cursor:pointer;
+    position:relative;
+    padding-left:30px;
+    &.active {
+      &:before {
+        background-color:$aqua;
+      }
+    }
+    @include mq(1440px) {
+      font-size:16px;
+    }
+    &:before {
+      content:'';
+      width:20px;
+      height:20px;
+      border:1px solid $gray;
+      display:inline-block;
+      @include border-radius(5px);
+      margin-right:5px;
+      vertical-align:middle;
+      position:absolute;
+      top:0;
+      left:0;
+    }
+    span {
+      color:$gray;
+      font-size:0.8em;
+      display:block;
+      margin-top:5px;
+    }
+  }
 }

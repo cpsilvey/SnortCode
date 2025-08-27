@@ -1,19 +1,33 @@
-#create-code-form {
-    position:relative;
-    float:left;
-    padding:50px 30px;
-    width:calc(66.66% - 62px);
-    border:1px solid #ededed;
-    background-color:#ffffff;
-    overflow:visible;
-    @include border-radius(10px);
-}
-#create-code-preview {
-    padding:50px 30px;
-    width:calc(33.33% - 92px);
-    margin-left:30px;
-    border:1px solid #ededed;
-    background-color:#ffffff;
-    @include border-radius(10px);
-    float:left;
+#create-code {
+    h1 {
+        margin-bottom:10px;
+    }
+    #create-code-form {
+        position:relative;
+        float:left;
+        padding:50px 30px;
+        width:calc(66.66% - 62px);
+        border:1px solid #ededed;
+        background-color:#ffffff;
+        overflow:visible;
+        @include border-radius(10px);
+        label {
+            margin-top:20px;
+        }
+        .custom-radio {
+            margin-top:10px;
+        }
+        #create-code-submit {
+            margin-top:20px;
+        }
+    }
+    #create-code-preview {
+        padding:50px 30px;
+        width:calc(33.33% - 92px);
+        margin-left:30px;
+        border:1px solid #ededed;
+        background-color:#ffffff;
+        @include border-radius(10px);
+        float:left;
+    }
 }

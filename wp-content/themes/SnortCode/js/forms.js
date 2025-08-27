@@ -10,14 +10,11 @@ $('body').on('click', '.custom-select-menu li', function(e) {
     $(this).parent().parent().find('.custom-select-value').html(label).attr('data-value', value);
     $(this).parent().removeClass('active');
     if (value == 'static') {
-        $('#static-url-container').css('display','block');
-        $('#dynamic-url-container').css('display','none');
+        
     } else if (value == 'dynamic') {
-        $('#static-url-container').css('display','none');
-        $('#dynamic-url-container').css('display','block');
+        
     } else if (value == 'vcard') {
-        $('#static-url-container').css('display','none');
-        $('#dynamic-url-container').css('display','none');
+        
     }
     e.stopPropagation();
 });
@@ -35,4 +32,15 @@ $('body').on('click', '.custom-toggle', function() {
         $(this).removeClass('active');
         $(this).attr('data-value', 'false');
    }
+});
+
+$('body').on('click', '.custom-radio-option', function() {
+    $(this).siblings().removeClass('active');
+    if ($(this).hasClass('active')) {
+        $(this).removeClass('active');
+    } else {
+        $(this).addClass('active');
+        var value = $(this).attr('data-value');
+        $(this).parent().attr('data-value', value);
+    }
 });
