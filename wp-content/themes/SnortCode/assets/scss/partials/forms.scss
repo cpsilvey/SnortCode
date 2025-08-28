@@ -239,8 +239,8 @@ label {
 input {
     border:1px solid #cccccc;
     font-size:18px;
-    padding:0 20px;
-    height:50px;
+    padding:0 10px;
+    height:40px;
     @include border-radius(10px);
     @include mq(1440px) {
       font-size:16px;
@@ -381,6 +381,61 @@ input {
       font-size:0.8em;
       display:block;
       margin-top:5px;
+    }
+  }
+}
+.image-radio {
+  padding-bottom:15px;
+  .image-radio-option {
+    position:relative;
+    width: calc(100% / 6 - 10px); /* subtract margin */
+    aspect-ratio: 1 / 1; /* keep square */
+    box-sizing: border-box;
+    float: left;
+    margin: 5px;
+    background-color:$light-gray;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80% 80%;
+    border:2px solid $light-gray;
+    @include border-radius(5px);
+    cursor:pointer;
+    @include transition(300ms);
+    &.active {
+      border-color:$aqua !important;
+      background-color:$light-aqua !important;
+    }
+    &:hover {
+      background-color:$ivory;
+    }
+    span {
+      position:absolute;
+      bottom:-18px;
+      left:0;
+      font-size:13px;
+      width:100%;
+      text-align:center;
+      color:$gray;
+    }
+  }
+}
+.toggle-pill {
+  overflow:hidden;
+  width:200px;
+  @include border-radius(12px);
+  .toggle-pill-option {
+    width:50%;
+    height:30px;
+    background-color:$light-gray;
+    float:left;
+    text-align:center;
+    line-height:30px;
+    font-size:13px;
+    cursor:pointer;
+    color:$gray;
+    &.active {
+      background-color:$aqua;
+      color:$charcoal;
     }
   }
 }

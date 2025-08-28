@@ -21,6 +21,8 @@ function blankie_scripts()
       wp_enqueue_script( 'edit',      get_template_directory_uri() . '/js/edit-code.js', array( 'jquery' ), '1.0', true );
       // Enqueue Generate Code Scripts
       wp_enqueue_script( 'generate',      get_template_directory_uri() . '/js/generate-code.js', array( 'jquery' ), '1.0', true );
+      // Enqueue Create Account Scripts
+      wp_enqueue_script( 'create-account',      get_template_directory_uri() . '/js/create-account.js', array( 'jquery' ), '1.0', true );
   }
 
 add_action('init', 'blankie_scripts'); // Add Scripts

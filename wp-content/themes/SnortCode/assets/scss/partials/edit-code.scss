@@ -27,6 +27,38 @@
             float:left;
             margin-right:10px;
         }
+        .image-radio {
+            #dot-style-square {
+                background-image:url('images/icon-dots-square.png');
+            }
+            #dot-style-rounded {
+                background-image:url('images/icon-dots-rounded.png');
+            }
+            #dot-style-shell {
+                background-image:url('images/icon-dots-shell.png');
+            }
+            #dot-style-dots {
+                background-image:url('images/icon-dots-dots.png');
+            }
+        }
+        #dot-color-container {
+            margin-top:10px;
+            .pickr {
+                float:left;
+                button {
+                    width:40px;
+                    height:40px;
+                }
+            }
+            input {
+                width:100px;
+                padding:0 10px;
+                float:left;
+                margin-left:5px;
+                cursor: pointer; /* normal text cursor */
+                background-color: #fff; /* keep background white */
+            }
+        }
         #edit-code-submit {
             margin-top:20px;
         }
@@ -39,6 +71,9 @@
         background-color:#ffffff;
         @include border-radius(10px);
         float:left;
+        svg {
+            width:100%;
+        }
     }
 }
 

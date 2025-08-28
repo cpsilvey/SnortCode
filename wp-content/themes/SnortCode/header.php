@@ -22,24 +22,9 @@
 
 	<body>
 		<div id="page-wrapper" class="clearfix">
-			<header>
-				<div id="header-logo"></div>
-				<div id="header-user">
-					<div id="header-user-monogram">
-					</div>
-					<?php
-						$user = wp_get_current_user();
-						$first = $user->user_firstname;
-  						$last = $user->user_lastname;
-						?>
-						<p><?php echo $first . ' ' . $last; ?></p>
-						<a href="#" id="logout-submit">Logout</a>
-				</div>
-				<ul>
-					<li><a href="<?php echo get_home_url(); ?>"><i class="icon-dashboard"></i><span>Dashboard</span></a></li>
-					<li><a href="<?php echo get_home_url() . '/my-codes'; ?>"><i class="icon-codes"></i><span>My Codes</a></span></li>
-					<li><a href="<?php echo get_home_url() . '/my-profile'; ?>"><i class="icon-profile"></i><span>My Profile</a></span></li>
-				</ul>
+			<header class="clearfix">
+				<?php blankie_nav(); ?>
+				<?php blankie_user_nav(); ?>
 			</header>
 
 			<div class="inner-wrapper" class="clearfix">

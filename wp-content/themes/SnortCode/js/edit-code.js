@@ -6,17 +6,16 @@ $('body').on('click', '#edit-code-submit', function(e) {
     var name = $('#code-name').val();
     var url = $('#code-url').val();
     var dot_style = $('#dot-style').attr('data-value');
-    var dot_color_mode = $('#dot-color-mode').attr('data-value');
+    var dot_color = $('#dot-color').val();
 
-
-    console.log(dot_color_mode); 
+    console.log(dot_color); 
 
     var data = {
         'id': id,
         'name': name,
         'url': url,
         'dot_style': dot_style,
-        'dot_color_mode': dot_color_mode,
+        'dot_color': dot_color,
         'action': 'edit_code',
     };
 
@@ -50,7 +49,7 @@ $('body').on('click', '#edit-code-submit', function(e) {
                 cornerdotgradientend: "",
                 cornerdottype: "rounded", // "dots" | "rounded" | "classy" | "classy-rounded" | "square" | "extra-rounded"
                 // Dots //
-                dotcolor: "",
+                dotcolor: data.dot_color,
                 dotgradienttype: "", // "linear" | "radial"
                 dotgradientstart: "",
                 dotgradientend: "",

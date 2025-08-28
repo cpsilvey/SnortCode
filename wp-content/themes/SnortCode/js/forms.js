@@ -44,3 +44,23 @@ $('body').on('click', '.custom-radio-option', function() {
         $(this).parent().attr('data-value', value);
     }
 });
+
+$('body').on('click', '.image-radio-option', function() {
+    $(this).siblings().removeClass('active');
+    if ($(this).hasClass('active')) {
+    } else {
+        $(this).addClass('active');
+        var value = $(this).attr('data-value');
+        $(this).parent().attr('data-value', value);
+    }
+});
+
+$('body').on('click', '.toggle-pill-option', function() {
+    $(this).siblings().removeClass('active');
+    if ($(this).hasClass('active')) {
+    } else {
+        $(this).addClass('active');
+        var value = $(this).attr('data-value');
+        $(this).parent().attr('data-value', value);
+    }
+});

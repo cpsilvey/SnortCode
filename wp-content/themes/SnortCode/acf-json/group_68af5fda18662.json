@@ -36,9 +36,9 @@
             "save_options": 0
         },
         {
-            "key": "field_68af6c87fa13a",
-            "label": "Dot Color Mode",
-            "name": "dot_color_mode",
+            "key": "field_68afc05fc66d9",
+            "label": "Corner Square Style",
+            "name": "corner_square_style",
             "aria-label": "",
             "type": "select",
             "instructions": "",
@@ -50,8 +50,12 @@
                 "id": ""
             },
             "choices": {
-                "solid": "Solid",
-                "gradient": "Gradient"
+                "square": "Square",
+                "rounded": "Rounded",
+                "extra-rounded": "Shell",
+                "dot": "Dot",
+                "classy": "Eye",
+                "classy-rounded": "Leaf"
             },
             "default_value": false,
             "return_format": "array",
@@ -63,6 +67,25 @@
             "placeholder": "",
             "create_options": 0,
             "save_options": 0
+        },
+        {
+            "key": "field_68afb61aa61cb",
+            "label": "Dot Color",
+            "name": "dot_color",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "allow_in_bindings": 0
         }
     ],
     "location": [
@@ -83,5 +106,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1756327092
+    "modified": 1756348632
 }

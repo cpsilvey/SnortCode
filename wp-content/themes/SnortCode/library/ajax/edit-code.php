@@ -4,7 +4,7 @@ function edit_code() {
     $name = $_POST['name'];
     $url = $_POST['url'];
     $dot_style = $_POST['dot_style'];
-    $dot_color_mode = $_POST['dot_color_mode'];
+    $dot_color = $_POST['dot_color'];
 
 
     // Sanitize Fields //
@@ -15,13 +15,13 @@ function edit_code() {
     update_field('name', $name, $id);
     update_field('url', $url, $id);
     update_field('dot_style', $dot_style, $id);
-    update_field('dot_color_mode', $dot_color_mode, $id);
+    update_field('dot_color', $dot_color, $id);
 
     $arr = array(
         'name' => $name,
         'url' => $url,
         'dot_style' => $dot_style,
-        'dot_color_mode' => $dot_color_mode,
+        'dot_color' => $dot_color,
     );
     echo json_encode($arr);
 
