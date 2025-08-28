@@ -1,0 +1,10 @@
+#edit-account {
+    #pass-container {
+        opacity:0.4;
+        pointer-events: none;
+        &.active {
+            opacity:1;
+            pointer-events: all;
+        }
+    }
+}

@@ -1,5 +1,4 @@
 		
-			</div><!-- / Inner Wrapper -->
 
 			<?php echo get_template_part('inc/overlay'); ?>
 		</div><!-- / Page Wrapper -->

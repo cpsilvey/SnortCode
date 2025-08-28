@@ -6,7 +6,7 @@ body {
     font-size:18px;
 }
 a {
-    @include transition(500ms);
+    @include transition(300ms);
     text-decoration:none;
 }
 p {

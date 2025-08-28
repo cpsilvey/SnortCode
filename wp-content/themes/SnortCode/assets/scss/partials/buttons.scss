@@ -14,3 +14,10 @@
     &:hover {
     }
 }
+.button-gray {
+    @extend .button;
+    background-color:$gray;
+    color:$white;
+    &:hover {
+    }
+}

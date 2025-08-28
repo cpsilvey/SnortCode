@@ -12,6 +12,7 @@ function page_router() {
         'Create Account' => 'create-account/create-account',
         'My Codes'   => 'my-codes/my-codes',
         'Account' => 'account/account',
+        'Login'      => 'login/login',
     ];
 
     if (array_key_exists($page, $routes)) {

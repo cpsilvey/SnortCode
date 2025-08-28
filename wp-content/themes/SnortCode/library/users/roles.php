@@ -1,5 +1,6 @@
 <?php
-$capabilities = array (
+function snortcode_add_roles() {
+  $capabilities = array (
     'activate_plugins' => false,
     'delete_others_pages' => false,
     'delete_others_posts' => false,
@@ -44,21 +45,41 @@ $capabilities = array (
     'install_themes' => false,
     'upload_plugins' => false,
     'upload_themes' => false,
+    'upload_files' => false,
     'delete_themes' => false,
     'delete_plugins' => false,
     'edit_plugins' => false,
     'edit_themes' => false,
-    'edit_files' => true,
+    'edit_files' => false,
     'edit_users' => false,
     'create_users' => false,
     'delete_users' => false,
     'unfiltered_html' => false,
   );
 
-$user = add_role( 'SnortCode User', __( 'SnortCode User' ), $capabilities);
-$admin = add_role( 'SnortCode Admin', __( 'SnortCode Admin' ), $capabilities);
+  // Only add if they don't exist
+  if ( ! get_role( 'snortcode_user' ) ) {
+      add_role( 'snortcode_user', __( 'SnortCode User' ), $capabilities );
+  }
 
-remove_role( 'subscriber' );
-remove_role( 'editor' );
-remove_role( 'author' );
-remove_role( 'contributor' );
+  if ( ! get_role( 'snortcode_admin' ) ) {
+      add_role( 'snortcode_admin', __( 'SnortCode Admin' ), $capabilities );
+  }
+
+  remove_role( 'subscriber' );
+  remove_role( 'editor' );
+  remove_role( 'author' );
+  remove_role( 'contributor' );
+}
+add_action( 'after_switch_theme', 'snortcode_add_roles' );
+
+// Redirect users when they try to access wp-admin
+add_action( 'admin_init', function() {
+  $user = wp_get_current_user();
+  $redirect = get_home_url();
+
+  if ( in_array( 'snortcode_user', (array) $user->roles ) && ! defined( 'DOING_AJAX' ) ) {
+      wp_redirect($redirect); // or your front-end dashboard URL
+      exit;
+  }
+});

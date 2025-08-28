@@ -26,21 +26,3 @@
         <div id="qrcode"></div>
     </div>
 </div>
-
-<script>
-const qrCode = new QRCodeStyling({
-    width: 200,
-    height: 200,
-    data: "https://yourwebsite.com",
-    dotsOptions: {
-    color: "#000",            // Color of dots
-    type: "square"           // "dots" | "rounded" | "classy" | 
-                              // "classy-rounded" | "square" | "extra-rounded"
-    },
-});
-
-qrCode.append(document.getElementById("qrcode"));
-
-
-
-</script>

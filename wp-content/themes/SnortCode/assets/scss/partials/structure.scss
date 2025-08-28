@@ -6,7 +6,11 @@ body {
     position:relative;
 }
 .inner-wrapper {
-    padding:0 50px;
+    width:100%;
+    max-width:1440px;
+    position:relative;
+    left:50%;
+    @include translate(-50%, 0);
 }
 .clearfix {
     &::after {

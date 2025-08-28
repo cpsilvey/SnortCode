@@ -23,8 +23,20 @@
 	<body>
 		<div id="page-wrapper" class="clearfix">
 			<header class="clearfix">
-				<?php blankie_nav(); ?>
-				<?php blankie_user_nav(); ?>
+				<div class="inner-wrapper">
+					<?php blankie_nav(); ?>
+					
+					<?php if (is_user_logged_in()) {
+						?>
+						<div id="user-menu-toggle"><span><?php echo get_user_initials(); ?></span></div>
+						<div id="user-account-menu">
+							<?php blankie_user_nav(); ?>
+							<a href="#" id="snortcode-logout">Logout</a>
+						</div>
+					<?php } else { ?>
+						<a href="<?php echo get_home_url(); ?>/create-account" class="button-aqua" id="header-signup">Sign Up</a>
+						<a href="<?php echo get_home_url(); ?>/login" class="button-gray" id="header-login">Login</a>
+					<?php } ?>
+				</div>
+				
 			</header>
-
-			<div class="inner-wrapper" class="clearfix">

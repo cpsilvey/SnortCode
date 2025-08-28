@@ -23,6 +23,10 @@ function blankie_scripts()
       wp_enqueue_script( 'generate',      get_template_directory_uri() . '/js/generate-code.js', array( 'jquery' ), '1.0', true );
       // Enqueue Create Account Scripts
       wp_enqueue_script( 'create-account',      get_template_directory_uri() . '/js/create-account.js', array( 'jquery' ), '1.0', true );
+      // Enqueue Edit Account Scripts
+      wp_enqueue_script( 'edit-account',      get_template_directory_uri() . '/js/edit-account.js', array( 'jquery' ), '1.0', true );
+      // Enqueue Logout Scripts
+      wp_enqueue_script( 'logout',      get_template_directory_uri() . '/js/logout.js', array( 'jquery' ), '1.0', true );
   }
 
 add_action('init', 'blankie_scripts'); // Add Scripts

@@ -1,5 +1,6 @@
 <?php
 function create_code() {
+    $current_user = wp_get_current_user();
     $name = $_POST['name'];
     $type = $_POST['type'];
     $url = $_POST['url'];
@@ -26,7 +27,7 @@ function create_code() {
     $new_post = array(
     'post_title'    => $unique_title,
     'post_status'   => 'publish',   // 'draft', 'pending', 'publish', 'future'
-    'post_author'   => 1,           // User ID
+    'post_author'   => $current_user->ID,           // User ID
     'post_type'     => 'codes',      // 'post', 'page', or your custom post type
     );
       
@@ -35,6 +36,8 @@ function create_code() {
     update_field('name', $name, $post_id);
     update_field('type', $type, $post_id);
     update_field('url', $url, $post_id);
+    update_field('owner_id', $current_user->ID, $post_id);
+    update_field('owner_account', $current_user->user_login, $post_id);
 
     $redirect = get_home_url().'/my-codes/?action=edit&id='.$post_id;
     $arr = array(
