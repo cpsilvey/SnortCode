@@ -6,10 +6,18 @@
         <!-- <div class="custom-toggle" id="code-active" data-value="false"><span class="off">Off</span><span class="on">On</span></div> -->
         
         <label>QR Code Type</label>
-        <div class="custom-radio" id="code-type" data-value="">
+        <div class="custom-radio" id="code-type" data-value="static">
             <div class="custom-radio-option active" data-value="static">Static <span>Encodes the URL directly. Once generated, it cannot be changed or tracked.</span></div>
-            <div class="custom-radio-option" data-value="dynamic">Dynamic <span>Points to a link you control, so you can edit the destination and track usage.</span></div>
-            <div class="custom-radio-option" data-value="vcard">vCard <span>Stores a digital business card (name, phone, email, etc.) that users can save to contacts.</span></div>
+            <?php if (plan_is_plus() || plan_is_premium()) { ?>
+                <div class="custom-radio-option" data-value="dynamic">Dynamic <span>Points to a link you control, so you can edit the destination and track usage.</span></div>
+            <?php } else { ?>
+                <div class="custom-radio-option disabled">Dynamic<span>Upgrade to Plus to unlock</span></div>
+            <?php } ?>
+            <?php if (plan_is_premium()) { ?>
+                <div class="custom-radio-option" data-value="vcard">vCard <span>Stores a digital business card (name, phone, email, etc.) that users can save to contacts.</span></div>
+            <?php } else { ?>
+                <div class="custom-radio-option disabled">vCard<span>Upgrade to Premium to unlock</span></div>
+            <?php } ?>
         </div>
 
         <div id="url-container">

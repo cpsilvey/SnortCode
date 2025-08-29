@@ -27,6 +27,8 @@ function blankie_scripts()
       wp_enqueue_script( 'edit-account',      get_template_directory_uri() . '/js/edit-account.js', array( 'jquery' ), '1.0', true );
       // Enqueue Logout Scripts
       wp_enqueue_script( 'logout',      get_template_directory_uri() . '/js/logout.js', array( 'jquery' ), '1.0', true );
+      // Enqueue Filter Sort Scripts
+      wp_enqueue_script( 'filter',      get_template_directory_uri() . '/js/filter-sort.js', array( 'jquery' ), '1.0', true );
   }
 
 add_action('init', 'blankie_scripts'); // Add Scripts

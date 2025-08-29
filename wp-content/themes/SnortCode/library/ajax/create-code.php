@@ -38,8 +38,9 @@ function create_code() {
     update_field('url', $url, $post_id);
     update_field('owner_id', $current_user->ID, $post_id);
     update_field('owner_account', $current_user->user_login, $post_id);
+    update_field('type', $type, $post_id);
 
-    $redirect = get_home_url().'/my-codes/?action=edit&id='.$post_id;
+    $redirect = get_home_url().'/my-codes/';
     $arr = array(
       'redirect' => $redirect,
     );

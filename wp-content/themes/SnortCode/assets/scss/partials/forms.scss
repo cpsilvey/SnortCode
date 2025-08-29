@@ -239,8 +239,8 @@ label {
 input {
     border:1px solid #cccccc;
     font-size:18px;
-    padding:0 10px;
-    height:40px;
+    padding:0 15px;
+    height:45px;
     @include border-radius(10px);
     @include mq(1440px) {
       font-size:16px;
@@ -359,6 +359,10 @@ input {
       &:before {
         background-color:$aqua;
       }
+    }
+    &.disabled {
+      opacity:0.4;
+      pointer-events:none;
     }
     @include mq(1440px) {
       font-size:16px;

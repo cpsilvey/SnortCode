@@ -8,7 +8,7 @@ foreach(glob(get_template_directory() . "/library/ajax/*.php") as $file){
 foreach(glob(get_template_directory() . "/library/users/*.php") as $file){
   require $file;
 }
-foreach(glob(get_template_directory() . "/library/login/*.php") as $file){
+foreach(glob(get_template_directory() . "/library/helpers/*.php") as $file){
   require $file;
 }
 

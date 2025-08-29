@@ -12,7 +12,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -36,6 +36,25 @@
             "save_options": 0
         },
         {
+            "key": "field_68afb61aa61cb",
+            "label": "Dot Color",
+            "name": "dot_color",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
             "key": "field_68afc05fc66d9",
             "label": "Corner Square Style",
             "name": "corner_square_style",
@@ -45,7 +64,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -69,16 +88,16 @@
             "save_options": 0
         },
         {
-            "key": "field_68afb61aa61cb",
-            "label": "Dot Color",
-            "name": "dot_color",
+            "key": "field_68b131e40bdd0",
+            "label": "Corner Square Color",
+            "name": "corner_square_color",
             "aria-label": "",
             "type": "color_picker",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -106,5 +125,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1756348632
+    "modified": 1756443135
 }

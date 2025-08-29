@@ -4,10 +4,32 @@ header {
     position:relative;
     z-index:10;
     border-bottom:1px solid $light-gray;
+    #header-logo {
+        width:200px;
+        background-color:#ededed;
+        height:50px;
+        position:absolute;
+        left:30px;
+        top:15px;
+    }
     .main-menu {
+        position:relative;
+        left:50%;
         float:left;
+        @include translate(-50%, 0);
+        margin-top:15px;
         li {
             float:left;
+            a {
+                color:$charcoal;
+                font-weight:500;
+                display:block;
+                line-height:50px;
+                padding:0 10px;
+                &:hover {
+                    color:$aqua;
+                }
+            }
         }
     }
     #header-signup {
@@ -24,7 +46,7 @@ header {
         height:50px;
         background-color:$aqua;
         float:right;
-        margin-top:15px;
+        margin-top:10px;
         @include border-radius(25px);
         span {
             line-height:50px;
@@ -35,12 +57,19 @@ header {
     }
     #user-account-menu {
         position:absolute;
-        right:0;
+        right:18px;
         top:70px;
         width:300px;
         background-color:$white;
         border:1px solid $light-gray;
+        opacity:0;
+        visibility:hidden;
+        @include transition(500ms);
         @include border-radius(10px);
+        &.active {
+            opacity:1;
+            visibility:visible;
+        }
         .user-menu {
             padding:20px;
             li {

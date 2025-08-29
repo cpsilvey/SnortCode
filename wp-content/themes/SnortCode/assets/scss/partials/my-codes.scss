@@ -1,55 +1,93 @@
 #my-codes {
     h1 {
-        margin-bottom:10px;
-        float:left;
+        font-weight:600;
+        margin:20px 0;
         span {
-            font-size:26px;
+            font-size:24px;
+            font-weight:400;
             color:#999999;
         }
     }
-    #code-search {
-        float:right;
+    #filter-sort {
+        padding:10px 15px;
+        background-color:$white;
+        border:1px solid $light-gray;
+        @include border-radius(10px);
+        #filter-sort-view {
+            float:left;
+            .view-button {
+                width:30px;
+                height:30px;
+                display:inline-block;
+                background-color:$light-gray;
+                border:1px solid $light-gray;
+                @include border-radius(5px);
+                background-size:20px 20px;
+                background-position:center center;
+                background-repeat:no-repeat;
+                cursor:pointer;
+                position:relative;
+                &.active {
+                    background-color:$light-aqua;
+                    border:1px solid $aqua;
+                    #view-list-icon rect, #view-grid-icon rect {
+                        fill:$charcoal;
+                    }
+                }
+                svg {
+                    width: 20px;
+                    height: 20px;
+                    display: block;
+                    position:absolute;
+                    top:50%;
+                    left:50%;
+                    @include translate(-50%, -50%);
+                }
+                #view-list-icon rect {
+                    fill:$gray;
+                }
+                #view-grid-icon rect {
+                    fill:$gray;
+                }
+            }
+        }
     }
-    ul {
+    #my-codes-header {
+        margin-bottom:10px;
+        .button-aqua {
+            float:right;
+        }
+        #code-search {
+            float:right;
+            background:$white;
+            width:350px;
+        }
+    }
+    #code-list {
         clear:both;
         padding-top:20px;
+        &.grid {
+            display:flex;
+            flex-direction:row;
+            flex-wrap:wrap;
+        }
         li {
             background-color:$white;
             border:1px solid #ededed;
-            margin-bottom:10px;
             @include border-radius(10px);
-            padding:20px 30px;
             @include transition(300ms);
             position:relative;
+            box-sizing: border-box;
             &:hover {
                 border-color:#4DCCBD;
                 .code-name {
                     color:#a855f7;
                 }
             }
-            a {
-                position:absolute;
-                top:0;
-                left:0;
-                width:100%;
-                height:100%;
-                z-index:10;
-            }
-            .code-preview {
-                width:60px;
-                height:60px;
-                background-color:#ededed;
-                float:left;
-                margin-right:20px;
-
-            }
             .code-name {
                 @include transition(300ms);
-                float:left;
                 font-weight:600;
                 font-size:20px;
-                margin-right:20px;
-                width:20%;
                 color:$charcoal;
                 span {
                     display:block;
@@ -59,11 +97,8 @@
                 }
             }
             .code-scans {
-                float:left;
                 font-size:20px;
-                text-align:center;
                 font-weight:600;
-                width:20%;
                 span {
                     display:block;
                     font-weight:400;
@@ -71,16 +106,92 @@
                 }
             }
             .code-type {
-                float:left;
-                width:20%;
-                text-align:center;
+                font-weight:600;
+                    span {
+                        font-weight:400;
+                        display:block;
+                        color:#999999;
+                        font-size:16px;
+                    }
+            }
+            .code-url {
                 font-weight:600;
                 span {
                     font-weight:400;
-                    display:block;
-                    color:#999999;
-                    font-size:16px;
+                    color:$gray;
                 }
+            }
+            &.list {
+                margin-bottom:10px;
+                padding:20px 30px;
+                .code-preview {
+                    width:60px;
+                    height:60px;
+                    background-color:#ededed;
+                    float:left;
+                    margin-right:20px;
+                }
+                .code-name {
+                    float:left;
+                    margin-right:20px;
+                    width:20%;
+                }
+                .code-scans {
+                    float:left;             
+                    text-align:center;
+                    width:20%;
+                }
+                .code-type {
+                    float:left;
+                    width:20%;
+                    text-align:center;
+                }
+            }
+            &.grid {
+                width:calc(20% - 14px);
+                float:left;
+                margin:7px;
+                padding:15px;
+                @include mq(1440px) {
+                    width:calc(25% - 14px);
+                }
+                @include mq(1000px) {
+                    width:calc(33.33% - 14px);
+                }
+                @include mq(700px) {
+                    width:calc(50% - 14px);
+                }
+                @include mq(480px) {
+                    width:calc(100% - 14px);
+                }
+                .code-preview {
+                    width:100%;
+                    padding-top:100%;
+                    background-color:#ededed;
+                    margin-bottom:20px;
+                }
+                .code-scans {
+                    span {
+                        display:inline-block;
+                        margin-left:5px;
+                    }
+                }
+                .code-type {
+                    span {
+                        display:inline-block;
+                    }
+                }
+                .code-url {
+
+                }
+            }
+            a {
+                position:absolute;
+                top:0;
+                left:0;
+                width:100%;
+                height:100%;
+                z-index:10;
             }
         }
     }

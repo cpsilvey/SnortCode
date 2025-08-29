@@ -8,7 +8,7 @@
 
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/nano.min.css"/> <!-- 'nano' theme -->
 
@@ -23,7 +23,8 @@
 	<body>
 		<div id="page-wrapper" class="clearfix">
 			<header class="clearfix">
-				<div class="inner-wrapper">
+				<div class="inner-wrapper clearfix">
+					<div id="header-logo"></div>
 					<?php blankie_nav(); ?>
 					
 					<?php if (is_user_logged_in()) {

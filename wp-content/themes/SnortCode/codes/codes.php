@@ -9,12 +9,12 @@ if ($action && $action == 'edit') {
     $scan_data = get_field('scan_data', $id);
 
     // Update the scan data //
-    $time = time();
-    add_row('scan_data', array('time' => $time), $id);
+    // $time = time();
+    // add_row('scan_data', array('time' => $time), $id);
 
 
     // Send the user somewhere //
-    if ($type == 'redirect') {
+    if ($type == 'dynamic') {
         // header("Location:".$redirect);
         // exit;
     } else if ($type == 'vcard') {

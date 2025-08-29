@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 512 512">
+  <!-- Generator: Adobe Illustrator 29.4.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 152)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #2c2c2c;
+      }
+
+      .st1 {
+        display: none;
+      }
+
+      .st2 {
+        fill: #222;
+      }
+    </style>
+  </defs>
+  <g id="dots-square" class="st1">
+    <rect class="st2" x="102.4" width="102.4" height="102.4"/>
+    <rect class="st2" x="204.8" width="102.4" height="102.4"/>
+    <rect class="st2" x="409.6" width="102.4" height="102.4"/>
+    <rect class="st2" y="102.4" width="102.4" height="102.4"/>
+    <rect class="st2" x="102.4" y="102.4" width="102.4" height="102.4"/>
+    <rect class="st2" x="307.2" y="102.4" width="102.4" height="102.4"/>
+    <rect class="st2" x="409.6" y="102.4" width="102.4" height="102.4"/>
+    <rect class="st2" x="102.4" y="204.8" width="102.4" height="102.4"/>
+    <rect class="st2" x="204.8" y="204.8" width="102.4" height="102.4"/>
+    <rect class="st2" x="307.2" y="204.8" width="102.4" height="102.4"/>
+    <rect class="st2" y="307.2" width="102.4" height="102.4"/>
+    <rect class="st2" x="204.8" y="307.2" width="102.4" height="102.4"/>
+    <rect class="st2" x="409.6" y="307.2" width="102.4" height="102.4"/>
+    <rect class="st2" y="409.6" width="102.4" height="102.4"/>
+    <rect class="st2" x="204.8" y="409.6" width="102.4" height="102.4"/>
+    <rect class="st2" x="307.2" y="409.6" width="102.4" height="102.4"/>
+    <rect class="st2" x="409.6" y="409.6" width="102.4" height="102.4"/>
+  </g>
+  <g id="dots-rounded" class="st1">
+    <g>
+      <path class="st2" d="M409.6,40.4v62h-61.92c-22.35,0-40.48,18.12-40.48,40.48v61.92h-102.4v-102.4h61.7c22.48,0,40.7-18.22,40.7-40.7v-21.82c0-22.03-17.86-39.88-39.88-39.88h-124.83c-22.14,0-40.09,17.95-40.09,40.09v62.31h-62.45C17.89,102.4,0,120.28,0,142.35v22.51c0,22.06,17.89,39.95,39.95,39.95h62.45v62.32c0,22.14,17.95,40.08,40.08,40.08h62.32v165.31c0,21.81,17.68,39.49,39.49,39.49h227.82c22.03,0,39.89-17.86,39.89-39.89v-125.08c0-22-17.83-39.83-39.83-39.83h-22.36c-22.21,0-40.22,18.01-40.22,40.22v62.18h-102.4v-102.4h62.29c22.15,0,40.11-17.96,40.11-40.11v-62.29h62.55c22.01,0,39.85-17.84,39.85-39.85V40.07c0-22.13-17.94-40.07-40.07-40.07h-21.93c-22.31,0-40.4,18.09-40.4,40.4Z"/>
+      <path class="st2" d="M0,409.6v62.44c0,22.07,17.89,39.96,39.96,39.96h23.27c21.63,0,39.17-17.54,39.17-39.17v-125.98c0-21.9-17.75-39.65-39.65-39.65h-22.71c-22.11,0-40.04,17.92-40.04,40.04v62.36Z"/>
+    </g>
+  </g>
+  <g id="dots-shell" class="st1">
+    <path class="st2" d="M200.81,0h3.99v102.4h-102.4v-3.99C102.4,44.1,146.5,0,200.81,0Z"/>
+    <path class="st2" d="M204.8,0h59.32C287.9,0,307.2,19.3,307.2,43.08v6.33c0,29.25-23.75,52.99-52.99,52.99h-49.41V0h0Z"/>
+    <path class="st2" d="M459.7,0h5.29c25.95,0,47.01,21.07,47.01,47.01v55.39h-102.4v-52.3c0-27.65,22.45-50.1,50.1-50.1Z"/>
+    <path class="st2" d="M49.16,102.4h53.24v102.4h-51.56c-28.06,0-50.84-22.78-50.84-50.84v-2.41c0-27.13,22.03-49.16,49.16-49.16Z"/>
+    <rect class="st2" x="102.4" y="102.4" width="102.4" height="102.4"/>
+    <path class="st2" d="M402.34,102.4h7.26v102.4h-102.4v-7.26c0-52.51,42.63-95.14,95.14-95.14Z"/>
+    <path class="st2" d="M409.6,102.4h102.4v7.32c0,52.48-42.61,95.08-95.08,95.08h-7.32v-102.4h0Z"/>
+    <path class="st2" d="M102.4,204.8h102.4v102.4h0c-56.52,0-102.4-45.88-102.4-102.4h0Z"/>
+    <rect class="st2" x="204.8" y="204.8" width="102.4" height="102.4"/>
+    <path class="st2" d="M307.2,204.8h102.4v1.68c0,55.59-45.13,100.72-100.72,100.72h-1.68v-102.4h0Z"/>
+    <path class="st2" d="M0,307.2h0c56.52,0,102.4,45.88,102.4,102.4H0v-102.4h0Z"/>
+    <rect class="st2" x="204.8" y="307.2" width="102.4" height="102.4"/>
+    <path class="st2" d="M458.15,307.2h3.88c27.58,0,49.97,22.39,49.97,49.97v52.43h-102.4v-53.85c0-26.8,21.75-48.55,48.55-48.55Z"/>
+    <path class="st2" d="M0,409.6h102.4C102.4,466.12,56.52,512,0,512h0v-102.4h0Z"/>
+    <path class="st2" d="M204.8,409.6h102.4v102.4h0c-56.52,0-102.4-45.88-102.4-102.4h0Z"/>
+    <rect class="st2" x="307.2" y="409.6" width="102.4" height="102.4"/>
+    <path class="st2" d="M409.6,409.6h102.4c0,56.52-45.88,102.4-102.4,102.4h0v-102.4h0Z"/>
+  </g>
+  <g id="dots-dots" class="st1">
+    <rect class="st2" x="102.4" y="0" width="102.4" height="102.4" rx="51.2" ry="51.2"/>
+    <rect class="st2" x="204.8" y="0" width="102.4" height="102.4" rx="51.2" ry="51.2"/>
+    <rect class="st2" x="409.6" y="0" width="102.4" height="102.4" rx="51.2" ry="51.2"/>
+    <rect class="st2" x="0" y="102.4" width="102.4" height="102.4" rx="51.2" ry="51.2"/>
+    <rect class="st2" x="102.4" y="102.4" width="102.4" height="102.4" rx="51.2" ry="51.2"/>
+    <rect class="st2" x="307.2" y="102.4" width="102.4" height="102.4" rx="51.2" ry="51.2"/>
+    <rect class="st2" x="409.6" y="102.4" width="102.4" height="102.4" rx="51.2" ry="51.2"/>
+    <rect class="st2" x="102.4" y="204.8" width="102.4" height="102.4" rx="51.2" ry="51.2"/>
+    <rect class="st2" x="204.8" y="204.8" width="102.4" height="102.4" rx="51.2" ry="51.2"/>
+    <rect class="st2" x="307.2" y="204.8" width="102.4" height="102.4" rx="51.2" ry="51.2"/>
+    <rect class="st2" x="0" y="307.2" width="102.4" height="102.4" rx="51.2" ry="51.2"/>
+    <rect class="st2" x="204.8" y="307.2" width="102.4" height="102.4" rx="51.2" ry="51.2"/>
+    <rect class="st2" x="409.6" y="307.2" width="102.4" height="102.4" rx="51.2" ry="51.2"/>
+    <rect class="st2" x="0" y="409.6" width="102.4" height="102.4" rx="51.2" ry="51.2"/>
+    <rect class="st2" x="204.8" y="409.6" width="102.4" height="102.4" rx="51.2" ry="51.2"/>
+    <rect class="st2" x="307.2" y="409.6" width="102.4" height="102.4" rx="51.2" ry="51.2"/>
+    <rect class="st2" x="409.6" y="409.6" width="102.4" height="102.4" rx="51.2" ry="51.2"/>
+  </g>
+  <g id="view-list">
+    <rect class="st0" width="512" height="73.14" rx="25.21" ry="25.21"/>
+    <rect class="st0" y="292.57" width="512" height="73.14" rx="25.21" ry="25.21"/>
+    <rect class="st0" y="438.86" width="512" height="73.14" rx="25.21" ry="25.21"/>
+    <rect class="st0" y="146.29" width="512" height="73.14" rx="25.21" ry="25.21"/>
+  </g>
+  <g id="view-grid" class="st1">
+    <rect class="st0" width="225.32" height="225.32" rx="30.51" ry="30.51"/>
+    <rect class="st0" x="286.68" width="225.32" height="225.32" rx="30.51" ry="30.51"/>
+    <rect class="st0" y="286.68" width="225.32" height="225.32" rx="30.51" ry="30.51"/>
+    <rect class="st0" x="286.68" y="286.68" width="225.32" height="225.32" rx="30.51" ry="30.51"/>
+  </g>
+</svg>
