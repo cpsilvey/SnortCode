@@ -1,4 +1,4 @@
-$('#snortcode-logout').click(function(e) {
+$('.snortcode-logout').click(function(e) {
     e.preventDefault();
     var data = {
         'action': 'snortcode_logout',

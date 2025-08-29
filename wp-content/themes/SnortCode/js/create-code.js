@@ -30,9 +30,20 @@ $('body').on('click', '#create-code-submit', function(e) {
           url: ajaxurl,
           data: data,
             dataType: 'json',
-              success: function(data){
-                var redirect = data.redirect;
-                window.location.replace(redirect);
+              success: function(response){
+                if (response.error_url) {
+                  $('#create-code-messages').append('<li>' + response.error_url + '</li');
+                  $('#overlay').removeClass('active');
+                } else if (response.error_type) {
+                  $('#create-code-messages').append('<li>' + response.error_type + '</li');
+                  $('#overlay').removeClass('active');
+                } else if (response.error_max) {
+                  $('#create-code-messages').append('<li>' + response.error_max + '</li');
+                  $('#overlay').removeClass('active');
+                } else if (response.redirect) {
+                  // Redirect only if we got a valid redirect URL
+                  window.location.replace(response.redirect);
+                }
             },
           });
     }

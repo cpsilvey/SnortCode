@@ -1,14 +1,14 @@
 <?php
 function get_code_max() {
     if (plan_is_free()) {
-        $max = '10';
-        return $max;
+        $free_code_max = get_field('free_max_codes', 'option');
+        return $free_code_max;
     } else if (plan_is_plus()) {
-        $max = '50';
-        return $max;
+        $plus_code_max = get_field('plus_max_codes', 'option');
+        return $plus_code_max;
     } else if (plan_is_premium()) {
-        $max = '250';
-        return $max;
+        $premium_code_max = get_field('premium_max_codes', 'option');
+        return $premium_code_max;
     } else {
         return;
     }

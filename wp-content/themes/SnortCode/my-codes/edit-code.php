@@ -9,6 +9,7 @@ $dot_color = get_field('dot_color', $id);
 $corner_square_style = get_field('corner_square_style', $id);
 ?>
 <div class="inner-wrapper">
+    <h1>Edit Code</h1>
     <div id="edit-code">
         <div id="edit-code-form">
             <h3>Code Content</h3>

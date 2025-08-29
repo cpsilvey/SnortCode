@@ -222,9 +222,10 @@
 
 label {
     display:block;
-    font-weight:600;
+    font-weight:400;
     margin-bottom:10px;
     font-size:18px;
+    line-height:22px;
     @include mq(1440px) {
       font-size:16px;
     }

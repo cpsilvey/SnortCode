@@ -1,5 +1,7 @@
 <div class="inner-wrapper">
-
+<?php if ( isset($_GET['login']) && $_GET['login'] == 'true' ) { ?>
+            <h2>Welcome! You have successfully logged in!</h2>
+        <?php } ?>
     <div id="my-codes">
         <?php
         $current_user = wp_get_current_user();
@@ -26,7 +28,7 @@
             <?php if (code_max_reached()) { ?> Upgrade to Unlock More Codes & Features! <?php } ?>
         </h1>
         <div id="my-codes-header" class="clearfix">
-            <a href="<?php echo get_home_url(); ?>/my-codes/?action=create" class="button-aqua">Create New</a>
+            <a href="<?php echo get_home_url(); ?>/my-codes/?action=create" class="button-aqua <?php if(code_max_reached()) { ?>disabled<?php } ?>">Create New</a>
             <div id="code-search" class="clearfix">
                 <input type="text" placeholder="Search Codes" />
             </div>
@@ -64,7 +66,7 @@
                 <li class="clearfix <?php echo $view; ?>" data-id="<?php echo $code->ID; ?>">
                     <a href="<?php echo get_home_url(); ?>/my-codes/?action=edit&id=<?php echo $code->ID; ?>"></a>
                     <div class="code-preview"></div>
-                    <p class="code-name"><?php echo $name; ?><span>Created: <?php echo $date; ?></span></p>
+                    <p class="code-name"><?php echo $name; ?><span>Created On: <?php echo $date; ?></span></p>
                     <?php if ($type !== 'static') { ?>
                         <p class="code-scans">Scans<span><?php echo $scan_count; ?></span></p>
                     <?php } ?>

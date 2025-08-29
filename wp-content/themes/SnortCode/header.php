@@ -31,8 +31,9 @@
 						?>
 						<div id="user-menu-toggle"><span><?php echo get_user_initials(); ?></span></div>
 						<div id="user-account-menu">
+							<?php $current_user = wp_get_current_user(); ?>
+							<h4>Welcome, <?php echo $current_user->first_name; ?>! <span>Your Plan: <a href="<?php echo get_home_url(); ?>/plans">Snortcode Free</a></span></h4>
 							<?php blankie_user_nav(); ?>
-							<a href="#" id="snortcode-logout">Logout</a>
 						</div>
 					<?php } else { ?>
 						<a href="<?php echo get_home_url(); ?>/create-account" class="button-aqua" id="header-signup">Sign Up</a>

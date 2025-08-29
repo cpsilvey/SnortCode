@@ -1,0 +1,15 @@
+Free Plan
+- 10 Stored Codes
+- Static Only
+- unlimited one-time codes via code designer
+
+Plus Plan
+- 50 Stored Codes
+- Static, Dynamic & vCard
+- unlimited one-time codes via code designer
+
+Premium Plan
+- 250 Stored Codes
+- Static, Dynamic & vCard
+- unlimited one-time codes via code designer
+- Scan Metrics

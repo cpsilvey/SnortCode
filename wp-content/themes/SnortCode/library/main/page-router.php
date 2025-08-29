@@ -13,6 +13,7 @@ function page_router() {
         'My Codes'   => 'my-codes/my-codes',
         'Account' => 'account/account',
         'Login'      => 'login/login',
+        'Recover Password' => 'recover-password/recover-password',
     ];
 
     if (array_key_exists($page, $routes)) {

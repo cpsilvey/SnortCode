@@ -6,12 +6,20 @@
     @include border-radius(10px);
     @include transition(300ms);
     text-decoration:none;
+    text-align:center;
+    box-sizing: border-box;
 }
 .button-aqua {
     @extend .button;
     background-color:$aqua;
     color:$white;
+    &.disabled {
+        pointer-events: none;
+        opacity:0.2;
+    }
     &:hover {
+        filter: brightness(1.1);
+        color:$white;
     }
 }
 .button-gray {
@@ -19,5 +27,7 @@
     background-color:$gray;
     color:$white;
     &:hover {
+        filter: brightness(1.1);
+        color:$white;
     }
 }

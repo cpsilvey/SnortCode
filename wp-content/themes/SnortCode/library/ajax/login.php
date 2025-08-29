@@ -15,9 +15,9 @@ function login() {
   }
 
   if ( ! $user ) {
-      $error = 'Sorry, that username or email does not exist.';
+      $error = 'Sorry, that account number or email does not exist';
   } elseif ( ! wp_check_password( $password, $user->data->user_pass, $user->ID ) ) {
-      $error = 'Incorrect password.';
+      $error = 'Incorrect password';
   } else {
       // Build credentials with actual username
       $credentials = array(
@@ -29,7 +29,7 @@ function login() {
       $login = wp_signon( $credentials, false );
 
       if ( ! is_wp_error( $login ) ) {
-          $redirect = get_home_url() . '/my-codes';
+          $redirect = get_home_url() . '/my-codes/?login=true';
       } else {
           $error = 'Login failed. Please try again.';
       }

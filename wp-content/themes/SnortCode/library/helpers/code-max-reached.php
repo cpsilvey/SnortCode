@@ -3,6 +3,12 @@ function code_max_reached() {
     $current_user = wp_get_current_user();
     $current_user_id = $current_user->ID;
     
+    // Get values from settings page //
+    $free_code_max = get_field('free_max_codes', 'option');
+    $plus_code_max = get_field('plus_max_codes', 'option');
+    $premium_code_max = get_field('premium_max_codes', 'option');
+
+
     $args = array(
         'post_type'   => 'codes',
         'meta_query'     => array(
@@ -12,24 +18,25 @@ function code_max_reached() {
                 'compare' => '='
             )
         ),
-        'posts_per_page' => -1, 
+        'posts_per_page' => -1,
+        'post_status' => 'publish', // only count published posts (to accommodate deactivated code function)
     );
     $codes = get_posts($args);
     $code_count = count($codes);
     if (plan_is_free()) {
-        if ($code_count >= 10) {
+        if ($code_count >= $free_code_max) {
             return true;
         } else {
             return;
         }
     } else if (plan_is_plus()) {
-        if ($code_count >= 50) {
+        if ($code_count >= $plus_code_max) {
             return true;
         } else {
             return;
         }
     } else if (plan_is_premium()) {
-        if ($code_count >= 250) {
+        if ($code_count >= $premium_code_max) {
             return true;
         } else {
             return;
